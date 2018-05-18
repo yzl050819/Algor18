@@ -19,6 +19,25 @@ namespace SortHelper
 		return arr;
 	}
 
+	int* geNearArr(int n, int stime)
+	{
+		int* arr = new int[n];
+		for (int i = 0; i < n; i++)
+		{
+			arr[i] = i;
+		}
+		srand(time(NULL));
+		for (int i = 0; i < stime; i++)
+		{
+			int posx = rand() % n;
+			int posy = rand() % n;
+
+
+			swap(arr[posx], arr[posy]);
+		}
+		return arr;
+	}
+
 	//´òÓ¡Êý×é
 	template<typename T>
 	void printArr(T arr[], int n)
@@ -55,4 +74,13 @@ namespace SortHelper
 
 		cout << sortName << ":" << double(endTime - startTime)/ CLOCKS_PER_SEC << "s" << endl;
 	}
+
+	int* copyIntArray(int a[], int n)
+	{
+		int* arr = new int[n];
+		copy(a, a + n, arr);
+		return arr;
+	}
+
+
 }

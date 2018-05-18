@@ -4,20 +4,25 @@
 #include"sortHelper.h"
 using namespace std;
 
+#include<ctime>
+
 int main()
 {
-	int arr[10] = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
-	float farr[10] = { 20, 19, 18, 17, 16, 15, 14, 13, 12, 11 };
-	Student st[4] = { { "D", 10 }, { "C", 9 }, { "B", 8 }, { "A", 7 } };
 
-	int n = 1000;
-	int *array = SortHelper::geRandArr(n, 0, n);
+
+	int n = 10000;
+	//int *arr = SortHelper::geRandArr(n, 0, n);
+	int *arr = SortHelper::geNearArr(n, 100);
+	int *arr2 =SortHelper::copyIntArray(arr, n);
+
 	//SelectionSort(array, n);
-	SortHelper::testSort("SelectionSort", SelectionSort, array, n);
+	SortHelper::testSort("SelectionSort", SelectionSort, arr, n);
+	SortHelper::testSort("insertionSort2", insertionSort2, arr2, n);
 
-	//SortHelper::printArr(array, n);
+	//SortHelper::printArr(arr2, n);
 
-	delete[] array;
+	delete[] arr;
+	delete[] arr2;
 
 	system("pause");
 	return 0;
