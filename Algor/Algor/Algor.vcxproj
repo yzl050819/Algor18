@@ -80,9 +80,12 @@
   <ItemGroup>
     <ClCompile Include="fun.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Student.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="fun.h" />
+    <ClInclude Include="sortHelper.h" />
+    <ClInclude Include="Student.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
