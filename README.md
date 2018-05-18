@@ -1,2 +1,2 @@
 # Algor18
-algorithm
+VS2013 
